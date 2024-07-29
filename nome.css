@@ -158,7 +158,6 @@ p {
   width: 22%;
 }
 
-/* Responsive styles */
 @media (max-width: 1200px) {
   .container {
       max-width: 100%;
