@@ -1,4 +1,4 @@
-/* Global styles */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -55,7 +55,6 @@ p {
   border-radius: 10px;
 }
 
-/* Section: Principais Culturas e Atividades */
 .section {
   background-color: #f8f4e6;
   padding: 50px 20px;
@@ -112,7 +111,6 @@ p {
   max-width: 300px;
 }
 
-/* Header Styles */
 .header {
   display: flex;
   justify-content: space-around;
