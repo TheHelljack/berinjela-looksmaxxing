@@ -109,7 +109,7 @@ p {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    max-width: 300px;
+    max-width: 300
 }
 
 * {
@@ -117,45 +117,44 @@ p {
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-}
+  }
   
-li {
+  li {
     list-style: none;
-}
+  }
   
-.container {
+  .container {
     width: 1600px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-  
-.header {
+  }
+  .header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 100px;
     box-shadow: 0px 35px 60px rgba(0, 0, 0, 0.25);
-}
+  }
   
-.header__logo {
+  .header__logo {
     text-transform: uppercase;
-}
+  }
   
-.header__menu {
+  .header__menu {
     display: flex;
     column-gap: 54px;
-}
+  }
   
-.header__link {
+  .header__link {
     font-size: 20px;
     text-transform: uppercase;
     color: #6A6A6A;
     text-decoration: none;
     position: relative;
-}
+  }
   
-.header__link::after {
+  .header__link::after {
     content: "";
     width: 0px;
     height: 2px;
@@ -164,22 +163,21 @@ li {
     bottom: -5px;
     left: 0;
     transition: 0.3s ease;
-}
+  }
   
-.header__link:hover::after {
+  .header__link:hover::after {
     width: 100%;
     transition: 0.3s ease;
-}
+  }
   
-.Logo {
-    width: 20%;
-}
-
-/* Media Queries */
+  .Logo{
+    width: 2%;
+  }
+  /* Estilo para dispositivos móveis e tablets */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        padding: 10px;
+        align-items: center;
     }
 
     .header {
@@ -188,9 +186,13 @@ li {
         padding: 10px;
     }
 
+    .header__logo {
+        margin-bottom: 10px;
+    }
+
     .header__menu {
         flex-direction: column;
-        row-gap: 20px;
+        gap: 10px;
     }
 
     .header__link {
@@ -198,43 +200,65 @@ li {
     }
 
     .text-content, .image-content {
-        max-width: 100%;
         text-align: center;
     }
 
-    .text-content h1 {
-        font-size: 2em;
+    .image-content img {
+        max-width: 90%;
     }
 
-    .text-content p {
-        font-size: 1em;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .cards, .benefits-challenges {
+    .cards {
         flex-direction: column;
         align-items: center;
     }
 
-    .card, .item {
-        max-width: 100%;
+    .card {
+        max-width: 90%;
+        margin: 10px 0;
+    }
+
+    .benefits-challenges {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        max-width: 90%;
+        margin: 10px 0;
     }
 }
 
+/* Estilo para dispositivos menores, como smartphones */
 @media (max-width: 480px) {
     .header__link {
         font-size: 16px;
     }
 
-    .text-content h1 {
-        font-size: 1.8em;
+    h1 {
+        font-size: 2.5em;
     }
 
-    .text-content p {
+    p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 8px 16px;
         font-size: 0.9em;
     }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 95%;
+    }
+
+    .item {
+        max-width: 95%;
+    }
 }
+
+  
