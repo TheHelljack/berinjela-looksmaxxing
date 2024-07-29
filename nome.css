@@ -5,6 +5,47 @@ body {
     background-color: #f8f4e6;
 }
 
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    box-shadow: 0px 35px 60px rgba(0, 0, 0, 0.25);
+}
+
+.header__logo {
+    text-transform: uppercase;
+}
+
+.header__menu {
+    display: flex;
+    column-gap: 54px;
+}
+
+.header__link {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #6A6A6A;
+    text-decoration: none;
+    position: relative;
+}
+
+.header__link::after {
+    content: "";
+    width: 0px;
+    height: 2px;
+    background: blue;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+.header__link:hover::after {
+    width: 100%;
+    transition: 0.3s ease;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -12,6 +53,11 @@ body {
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .text-content {
@@ -55,7 +101,6 @@ p {
     border-radius: 10px;
 }
 
-/* Section: Principais Culturas e Atividades */
 .section {
     background-color: #f8f4e6;
     padding: 50px 20px;
@@ -70,8 +115,8 @@ p {
 
 .cards {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .card {
@@ -96,11 +141,10 @@ p {
     line-height: 1.5;
 }
 
-/* Section: Benefícios e Desafios */
 .benefits-challenges {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .item {
@@ -109,66 +153,79 @@ p {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    max-width: 300
+    max-width: 300px;
+    flex: 1 1 calc(33.333% - 40px);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  li {
-    list-style: none;
-  }
-  
-  .container {
-    width: 1600px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 100px;
-    box-shadow: 0px 35px 60px rgba(0, 0, 0, 0.25);
-  }
-  
-  .header__logo {
-    text-transform: uppercase;
-  }
-  
-  .header__menu {
-    display: flex;
-    column-gap: 54px;
-  }
-  
-  .header__link {
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #6A6A6A;
-    text-decoration: none;
-    position: relative;
-  }
-  
-  .header__link::after {
-    content: "";
-    width: 0px;
-    height: 2px;
-    background: blue;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    transition: 0.3s ease;
-  }
-  
-  .header__link:hover::after {
-    width: 100%;
-    transition: 0.3s ease;
-  }
-  
-  
-  
+.item .number {
+    font-size: 2em;
+    color: #2b2b2b;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    color: #2b2b2b;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.item p {
+    color: #5f5f5f;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-container {
+        justify-content: center;
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .text-content, .image-content {
+        max-width: 100%;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .header__menu {
+        column-gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 30px 10px;
+    }
+
+    .cards, .benefits-challenges {
+        flex-direction: column;
+    }
+
+    .card, .item {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+
+    .section h
