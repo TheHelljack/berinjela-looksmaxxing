@@ -227,5 +227,9 @@ p {
         padding: 10px 15px;
         font-size: 0.9em;
     }
+    
+    .section h2 {
+        font-size: 2em;
+    }
+}
 
-    .section h
