@@ -1,68 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-}
-
-li {
-    list-style: none;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    box-shadow: 0px 35px 60px rgba(0, 0, 0, 0.25);
-    background-color: #fff;
-}
-
-.header__logo {
-    text-transform: uppercase;
-}
-
-.header__menu {
-    display: flex;
-    column-gap: 54px;
-}
-
-.header__link {
-    font-size: 20px;
-    text-transform: uppercase;
-    color: #6A6A6A;
-    text-decoration: none;
-    position: relative;
-}
-
-.header__link::after {
-    content: "";
-    width: 0;
-    height: 2px;
-    background: blue;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    transition: 0.3s ease;
-}
-
-.header__link:hover::after {
-    width: 100%;
-    transition: 0.3s ease;
-}
-
+/* styles.css */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -70,23 +6,22 @@ body {
 }
 
 .container {
-    flex-direction: column;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .text-content {
     max-width: 600px;
-    flex: 1 1 300px;
-    margin-bottom: 20px;
 }
 
-.image-content {
-    flex: 1 1 300px;
-    text-align: center;
-}
-
-h1, h2 {
+h1 {
     color: #2b2b2b;
+    font-size: 3em;
+    margin-bottom: 20px;
 }
 
 p {
@@ -98,7 +33,6 @@ p {
 .buttons {
     display: flex;
     gap: 10px;
-    justify-content: center;
 }
 
 .btn {
@@ -121,6 +55,7 @@ p {
     border-radius: 10px;
 }
 
+/* Section: Principais Culturas e Atividades */
 .section {
     background-color: #f8f4e6;
     padding: 50px 20px;
@@ -128,17 +63,18 @@ p {
 }
 
 .section h2 {
+    color: #2b2b2b;
     font-size: 2.5em;
     margin-bottom: 40px;
 }
 
-.cards, .benefits-challenges {
+.cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.card, .item {
+.card {
     background-color: #fff;
     padding: 20px;
     margin: 10px;
@@ -148,84 +84,30 @@ p {
     flex: 1 1 calc(33.333% - 40px);
 }
 
-.card h3, .item h3 {
+.card h3 {
+    color: #2b2b2b;
     font-size: 1.5em;
     margin-bottom: 15px;
 }
 
-.card p, .item p {
+.card p {
+    color: #5f5f5f;
     font-size: 1em;
     line-height: 1.5;
 }
 
-.item .number {
-    font-size: 2em;
-    color: #2b2b2b;
-    margin-bottom: 10px;
+/* Section: Benefícios e Desafios */
+.benefits-challenges {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-/* Media Queries */
-@media (max-width: 1024px) {
-    .header {
-        padding: 10px 0;
-    }
-
-    .header__menu {
-        column-gap: 30px;
-    }
-
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .text-content, .image-content {
-        max-width: 100%;
-        flex: 1 1 100%;
-    }
-
-    .buttons {
-        justify-content: center;
-    }
+.item {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 300
 }
-
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    .header__menu {
-        flex-direction: column;
-        row-gap: 10px;
-    }
-
-    .section {
-        padding: 30px 10px;
-    }
-    
-    .cards, .benefits-challenges {
-        flex-direction: column;
-    }
-    
-    .card, .item {
-        max-width: 100%;
-        margin: 10px 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .header__link {
-        font-size: 18px;
-    }
-
-    .header__link::after {
-        bottom: -3px;
-    }
-
-    .header__logo__name {
-        font-size: 24px;
-    }
-
-    .btn {
-        padding: 10px 15px
